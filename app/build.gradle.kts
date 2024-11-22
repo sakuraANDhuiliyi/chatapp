@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.a1"
+    namespace = "com.example.aichatapp"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.a1"
+        applicationId = "com.example.aichatapp"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -59,18 +59,13 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation(libs.androidx.navigation.compose)
-    implementation(libs.androidx.activity.ktx)
+    implementation(files("libs/SparkChain.aar"))
     testImplementation(libs.junit)
-    implementation("androidx.navigation.safeargs:androidx.navigation.safeargs.gradle.plugin:2.8.3")
-    implementation("androidx.navigation:navigation-dynamic-features-fragment:2.8.3")
-    implementation("androidx.navigation:navigation-common-ktx:2.8.3")
-    implementation("androidx.navigation:navigation-common:2.8.3")
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation(files("libs/SparkChain.aar"))
+
 }
