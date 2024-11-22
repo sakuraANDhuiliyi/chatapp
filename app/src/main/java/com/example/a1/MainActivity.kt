@@ -61,12 +61,12 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         val config = SparkChainConfig.builder()
-            .appID("efaa9523")
-            .apiKey("d6097790dac5bc5d9c0f798e9cd7496f")
-            .apiSecret("NjIzNDE4MWNkYjg0NjYxNWNjN2QxMWU4")
+            .appID("")
+            .apiKey("")//换成自己申请的
+            .apiSecret("")
         SparkChain.getInst().init(applicationContext, config)
         val chatLLMConfig = LLMConfig.builder()
-            .domain("generalv3")
+            .domain("generalv3")//注意要和url一一对应
             .url("wss://spark-api.xf-yun.com/v3.1/chat")
             .maxToken(2048)
             .temperature(0.7f)
